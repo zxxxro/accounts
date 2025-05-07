@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "license": "GPL-3.0",
+  "tasks": {
+    "start": "deno run server.ts",
+    "watch": "deno run --watch server.ts",
+    "update": "deno run updater.ts"
+  },
+  "imports": {
+    "-/": "./",
+    "~/": "./src/",
+    "@std/bdd": "jsr:@std/testing/bdd",
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/expect": "jsr:@std/expect",
+    "@std/http": "jsr:@std/http",
+    "@std/datetime": "jsr:@std/datetime",
+    "@zxxxro/commons": "jsr:@zxxxro/commons@^0.22.22",
+    "@zxxxro/anemics": "jsr:@zxxxro/anemics@^0.17.2"
+  },
+  "fmt": {
+    "files": {
+      "include": [
+        "server.ts",
+        "updater.ts",
+        "src/",
+        "test/"
+      ]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 120,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "lint": {
+    "files": {
+      "include": ["server.ts", "updater.ts", "src/**/*.ts", "test/**/*.ts"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "exclude": ["no-explicit-any"]
+    }
+  }
+}

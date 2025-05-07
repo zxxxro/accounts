@@ -1,2 +1,3 @@
-# ts-api-account
-A simple user account api
+# ACCOUNTS
+
+A simple account manager
